@@ -7,7 +7,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
     },
-    icon: __dirname + "/icon.png"
+    icon: __dirname + "/build/icon.png"
   });
 
   win.loadURL('https://excalidraw.com/');

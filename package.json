@@ -1,5 +1,5 @@
 {
-    "name": "excalidraw",
+    "name": "excalidraw-desktop",
     "productName": "Excalidraw",
     "description": "Desktop app for Excalidraw",
     "version": "1.0.1",
@@ -49,7 +49,7 @@
             "target": [
                 "pacman"
             ],
-            "icon": "icon.png"
+            "icon": "build/icon.png"
         },
         "msi": {
             "oneClick": false,

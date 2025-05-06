@@ -1,48 +1,59 @@
 {
-  "name": "excalidraw",
-  "productName": "Excalidraw",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron .",
-    "dist": "electron-builder"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "electron": "^32.1.2",
-    "electron-builder": "^25.0.5"
-  },
-  "build": {
-    "appId": "app.excalidraw",
+    "name": "excalidraw",
     "productName": "Excalidraw",
-    "directories": {
-      "output": "dist"
+    "description": "Desktop app for Excalidraw",
+    "version": "1.0.1",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "electron .",
+        "dist": "electron-builder"
     },
-    "files": [
-      "build/**/*",
-      "node_modules/**/*",
-      "index.js",
-      "package.json"
-    ],
-    "mac": {
-      "target": "dmg",
-      "category": "public.app-category.graphics-design",
-      "icon": "build/icon.icns"
+    "keywords": [],
+    "author": {
+        "name": "Antonin Ruan",
+        "email": "antonin@ruan.fr"
     },
-    "win": {
-      "target": [
-        "portable",
-        "msi"
-      ],
-      "icon": "build/icon2.ico"
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "electron": "^32.1.2",
+        "electron-builder": "^25.1.8"
     },
-    "msi": {
-      "oneClick": false,
-      "perMachine": false
+    "build": {
+        "appId": "app.excalidraw",
+        "productName": "Excalidraw",
+        "directories": {
+            "output": "dist"
+        },
+        "files": [
+            "build/**/*",
+            "node_modules/**/*",
+            "icon.png",
+            "index.js",
+            "package.json"
+        ],
+        "mac": {
+            "target": "dmg",
+            "category": "public.app-category.graphics-design",
+            "icon": "build/icon.icns"
+        },
+        "win": {
+            "target": [
+                "portable",
+                "msi"
+            ],
+            "icon": "build/icon2.ico"
+        },
+        "linux": {
+            "target": [
+                "pacman"
+            ],
+            "icon": "icon.png"
+        },
+        "msi": {
+            "oneClick": false,
+            "perMachine": false
+        }
     }
-  }
 }

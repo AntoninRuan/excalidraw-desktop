@@ -7,11 +7,12 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
     },
+    icon: __dirname + "/icon.png"
   });
 
   win.loadURL('https://excalidraw.com/');
 
-  if (process.platform === 'win32') {
+  if (process.platform === 'win32' || process.platform === 'linux') {
     const emptyMenu = Menu.buildFromTemplate([]);
     Menu.setApplicationMenu(emptyMenu);
   }
